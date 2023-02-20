@@ -42,10 +42,9 @@ function changeBigCarouselPos(newActiveBtn){
     }
 }
 
-
 bigCarouselBtns.forEach(function(btn){
     btn.onclick = function(e){
         changeBigCarouselPos(btn);
     }
 })
-
+//

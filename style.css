@@ -46,6 +46,15 @@ body{
         padding: clamp(0.5rem, 0.178rem + 1.32vw, 0.813rem) clamp(0.875rem, -0.283rem + 4.75vw, 2rem);
     }
 }
+@media(max-width:390px){
+    .section-header{
+        font-size: 13px;
+    }
+    .section-end-btn{
+        font-size: 12px;
+        padding:10px 20px;
+    }
+}
 /*----NAVIGATION----*/
 .mobile-navigation{
     display:none;
@@ -261,6 +270,27 @@ body{
     }
 
 }
+@media(max-width:390px){
+    .preview{
+        display: flex;
+        justify-content: center;
+    }
+    .preview-text,.preview-header{
+        display: none;
+    }
+    .preview-search{
+        width:96%;
+        padding: 4px 8px;
+    }
+    .search-input{
+        width:54%;
+        font-size: 11px;
+    }
+    .search-btn{
+        padding:8px 10px;
+        font-size: 9px;
+    }
+}
 /*----------*/
 
 /*----STEPS SECTION----*/
@@ -313,6 +343,27 @@ body{
         height: 70px;
     }
 }
+
+@media(max-width:389px){
+    .steps{
+        padding-top: 40px;
+        padding-bottom: 40px;
+    }
+    .steps-cards{
+        flex-direction: column;
+        gap:30px;
+        align-items: center;
+        margin-top: 30px;
+    }
+    .step-card-text{
+        margin-top: 15px;
+        font-size: 12px;
+    }
+    .step-card-icon{
+        width: 65px;
+        height: 65px;
+    }
+}
 /*--------*/
 
 /*----DESTINATIONS SECTION----*/
@@ -360,6 +411,11 @@ body{
 @media(min-width:390px) and (max-width:768px){
     .destinations{
         padding-bottom: clamp(1.25rem, -2.609rem + 15.83vw, 5rem);
+    }
+}
+@media(max-width:389px){
+    .destinations{
+        padding-bottom: 40px;
     }
 }
 /*--------*/
@@ -425,7 +481,29 @@ body{
         height: clamp(8.125rem, 0.387rem + 31.75vw, 15.625rem);
     }
 }
-
+@media(max-width:389px){
+    .stories-cards{
+        padding:15px;
+        gap:10px;
+    }
+    .storie-card-img img{
+        width: 155px;
+        height: 130px;
+    }
+    .storie-card{
+        gap:10px;
+    }
+    .storie-card-header{
+        font-size: 11px;
+    }
+    .storie-card-text{
+        gap:4px;
+    }
+    .card-paragraph{
+        font-size:9px;
+        max-height:110px;
+    }
+}
 /*--------*/
 
 /*----FOOTER----*/
