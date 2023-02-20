@@ -290,6 +290,9 @@ body{
     text-align: center;
 }
 @media (min-width:390px) and (max-width:768px){
+    .steps{
+        padding-bottom: clamp(1.25rem, -2.609rem + 15.83vw, 5rem);
+    }
     .steps-cards{
         gap:40px;
         margin:40px 15px;
@@ -346,6 +349,11 @@ body{
 .active-carousel-btn{
     background-color:#F2785C;
 }
+@media(min-width:390px) and (max-width:768px){
+    .destinations{
+        padding-bottom: clamp(1.25rem, -2.609rem + 15.83vw, 5rem);
+    }
+}
 /*--------*/
 
 /*----STORIES SECTION----*/
@@ -370,14 +378,14 @@ body{
     align-items: start;
     gap:clamp(0.5rem, -0.646rem + 2.38vw, 1.5rem);
     color: #0D606F;
-    max-height: 260px;
-    overflow: scroll;
 }
 .storie-card-header{
     font-size: clamp(1.5rem, 0.712rem + 1.64vw, 2.188rem);
 }
 .card-paragraph{
     font-size: clamp(1rem, 0.713rem + 0.6vw, 1.25rem);
+    max-height: 260px;
+    overflow: scroll;
 }
 .storie-card-img img{
     width: 400px;
@@ -385,12 +393,34 @@ body{
     filter: drop-shadow(0px 4px 4px #0D606F);
     border-radius: 16px;
 }
+@media(min-width:390px) and (max-width:768px){
+    .stories-cards{
+        padding:15px;
+        gap:15px;
+    }
+    .storie-card{
+        gap:10px;
+    }
+    .storie-card-header{
+        font-size: clamp(0.688rem, 0.494rem + 0.79vw, 0.875rem);
+    }
+    .storie-card-text{
+        gap:5px;
+    }
+    .card-paragraph{
+        font-size:clamp(0.563rem, 0.369rem + 0.79vw, 0.75rem);
+        max-height:clamp(6.875rem, -0.863rem + 31.75vw, 14.375rem);
+    }
+    .storie-card-img img{
+        width:clamp(9.375rem, -6.746rem + 66.14vw, 25rem);
+        height: clamp(8.125rem, 0.387rem + 31.75vw, 15.625rem);
+    }
+}
 
 /*--------*/
 
 /*----FOOTER----*/
-
-.footer-text{
+.footer-wrapper{
     color:white;
     display: flex;
     align-items: center;
@@ -399,3 +429,32 @@ body{
     font-size: 16px;
     height:60px;
 }
+.gh-link{
+    text-decoration: none;
+}
+.gh-icon{
+    position: relative;
+    left:clamp(11.563rem, -14.582rem + 54.4vw, 34.375rem);
+}
+.gh-logo{
+    width:45px;
+    height: 45px;
+}
+@media(max-width:768px){
+    .gh-icon{
+        position: static;
+      
+    }
+    .footer-copyright{
+        display:none;
+    }
+    .gh-logo{
+        width:clamp(2.563rem, 1.015rem + 6.35vw, 4.063rem);
+        height: clamp(2.563rem, 1.015rem + 6.35vw, 4.063rem);
+    }
+    .footer-wrapper{
+        height:clamp(3.75rem, 2.138rem + 6.61vw, 5.313rem);
+    }
+}
+
+/*--------*/
