@@ -370,6 +370,11 @@ body{
 .destinations{
     padding-bottom: 80px;
 }
+.mobile-carousel{
+    display: none;
+    align-items: center;
+    justify-content: center;
+}
 .destinations-carousel{
     margin-top: 46px;
 }
@@ -408,14 +413,94 @@ body{
 .active-carousel-btn{
     background-color:#F2785C;
 }
+
+.mobile-carousel-images{
+    overflow:hidden;
+    border-radius: 16px;
+}
+.mobile-img-list{
+    display: flex;
+    position: relative;
+    right:0;
+    width:9999px;
+    transition:right 0.8s ease-in;
+}
+.mobile-carousel-elem{
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+.mobile-carousel-elem p{
+    color: white;
+    font-family: 'Red Hat Text';
+    font-style: normal;
+    font-weight: 500;
+    margin: 8px 15px;
+}
+.mobile-carousel-btn{
+    cursor:pointer;
+    position:relative;
+    z-index:3;
+}
+.mobile-prev-btn{
+    transform: rotate(180deg);
+    left:5%;
+}
+.mobile-next-btn{
+    right:5%;
+}
+.inactive-mob-btn{
+    opacity:0.5;
+}
+.spain{
+    background-image: url('media/carouselImages/mobile/Rectangle\ 26.jpg');
+}
+.japan{
+    background-image: url('media/carouselImages/mobile/Rectangle\ 34.jpg');
+}
+.usa{
+    background-image: url('media/carouselImages/mobile/Rectangle\ 35.jpg');
+}
+@media(max-width:768px){
+    .destinations-carousel{
+        display:none;
+    }
+    .mobile-carousel{
+        display:flex;
+        
+    }
+
+}
 @media(min-width:390px) and (max-width:768px){
     .destinations{
         padding-bottom: clamp(1.25rem, -2.609rem + 15.83vw, 5rem);
+    }
+    .mobile-carousel-elem, .mobile-carousel-images{
+        width: clamp(22.5rem, -0.653rem + 94.99vw, 45rem); /*360px min 720px max*/
+        height:clamp(13.125rem, -0.381rem + 55.41vw, 26.25rem);/*210px min 420px max*/
+    }
+    .mobile-carousel-elem p{
+        font-size: clamp(1.25rem, 0.864rem + 1.58vw, 1.625rem);/*min 20px max 26px*/
+    }
+    .mobile-carousel{
+        margin: clamp(1.25rem, -0.036rem + 5.28vw, 2.5rem)/*20px min 40px max*/ 0 clamp(0.625rem, -0.661rem + 5.28vw, 1.875rem)/*10px min 30px max*/;
+    }
+    .mobile-carousel-btn img{
+        width: clamp(0.938rem, -0.027rem + 3.96vw, 1.875rem);
     }
 }
 @media(max-width:389px){
     .destinations{
         padding-bottom: 40px;
+    }
+    .mobile-carousel-elem p{
+        font-size: 20px; 
+    }  
+    .mobile-carousel{
+        margin: 20px 15px 10px;
+    }
+    .mobile-carousel-btn img{
+        width: 15px;
     }
 }
 /*--------*/

@@ -48,3 +48,42 @@ bigCarouselBtns.forEach(function(btn){
     }
 })
 //
+
+//carousel on <768p res
+let mobileCarousel = document.querySelector('.mobile-carousel-images');
+let imagesList = document.querySelector('.mobile-img-list');
+let prevBtn = document.querySelector('.mobile-prev-btn');
+let nextBtn = document.querySelector('.mobile-next-btn');
+let carouselElems = document.querySelectorAll('.mobile-carousel-elem')
+let mobileCarouselPos = 0;
+let maxPos = carouselElems[0].offsetWidth* (carouselElems.length-1);
+
+function makeMovement(dir){
+    if(dir == 'right' && mobileCarouselPos<maxPos){
+        mobileCarouselPos += carouselElems[0].offsetWidth;
+    }
+    if(dir == 'left' && mobileCarouselPos > 0){
+        mobileCarouselPos -= carouselElems[0].offsetWidth;
+    }
+    imagesList.style.right = mobileCarouselPos+'px';
+    changeActive();
+}
+function changeActive(){
+    if(mobileCarouselPos>0 && mobileCarouselPos<maxPos){
+        prevBtn.classList.remove('inactive-mob-btn');
+        nextBtn.classList.remove('inactive-mob-btn');
+    }
+    if(mobileCarouselPos==0){
+        prevBtn.classList.add('inactive-mob-btn');
+    }
+    if(mobileCarouselPos==maxPos){
+        nextBtn.classList.add('inactive-mob-btn');
+    }
+}
+
+nextBtn.onclick = function(e){
+    makeMovement('right');
+}
+prevBtn.onclick = function(e){
+    makeMovement('left');
+}
