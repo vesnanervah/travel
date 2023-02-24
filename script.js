@@ -87,3 +87,51 @@ nextBtn.onclick = function(e){
 prevBtn.onclick = function(e){
     makeMovement('left');
 }
+
+//login popup
+let loginPopup = document.querySelector('.login-popup');
+let regModeBtn = document.querySelector('.reg-pup-enter');
+let logModeBtn = document.querySelector('.log-pup-enter');
+let loginHidingOptions = document.querySelector('.login-options-other');
+let popupHeader = document.querySelector('.popup-header p');
+let loginFooter = document.querySelector('.log-in-footer-text');
+let registerFooter = document.querySelector('.register-footer-text');
+let passRecoverBtn = document.querySelector('.forgot-pass');
+let openPopupBtn = document.querySelector('.login-btn');
+let blackBcg = document.querySelector('.black-background');
+
+function showPopup(){
+    loginPopup.style.left = window.innerWidth/2 - loginPopup.offsetWidth/2 + 'px';
+    loginPopup.style.top = window.innerHeight/2-loginPopup.offsetHeight/2 + 'px';
+    blackBcg.classList.remove('hidden');
+    document.body.style.overflow = 'hidden';
+}
+function hidePopup(){
+    loginPopup.style.top = `-${window.innerHeight/2+loginPopup.offsetHeight/2}px`;
+    blackBcg.classList.add('hidden');
+    document.body.style.overflow = 'auto';
+}
+
+
+hidePopup();
+regModeBtn.onclick = function(e){
+  loginHidingOptions.classList.add('hidden');
+  loginFooter.classList.add('hidden');
+  registerFooter.classList.remove('hidden');
+  popupHeader.textContent = `Create account`;
+  passRecoverBtn.classList.add('hidden');
+}
+logModeBtn.onclick = function(e){
+  registerFooter.classList.add('hidden');
+  loginHidingOptions.classList.remove('hidden');
+  loginFooter.classList.remove('hidden');
+  passRecoverBtn.classList.remove('hidden');
+  popupHeader.textContent = `Log in to your account`;
+}
+openPopupBtn.onclick = function(){
+    showPopup();
+}
+blackBcg.onclick = function(){
+    hidePopup();
+}
+//
