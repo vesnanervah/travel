@@ -77,12 +77,8 @@ body{
 .burger{
     display:none;
 }
+
 @media(max-width:1024px){
-    .nav-logo-text{
-        display:none;
-    }
-}
-@media(max-width:769px){
     .navigation{
         display:none;
     }
@@ -119,7 +115,7 @@ body{
     top:42px;
     width:160px;
     transition:left 1s;
-    left:-160px;
+    left:-100%;
 }
 .menu-is-open{
     left:0px;
@@ -147,6 +143,20 @@ body{
 .mobile-menu-link{
     text-decoration: none;
     color:white
+}
+@media(min-width:390px) and (max-width:1024px){
+    .mobile-hidden-menu{
+        width:clamp(10rem, 5.386rem + 18.93vw, 17.5rem)/*-min160px and max280px-*/;
+        
+    }
+    .mobile-menu-list{
+        gap:clamp(0.625rem, 0.241rem + 1.58vw, 1.25rem)/*-min10px max20px-*/;
+        padding-right:clamp(0rem, -0.384rem + 1.58vw, 0.625rem)/*-min0px max10px-*/;
+
+    }
+    .mobile-menu-item{
+        font-size: clamp(1rem, 0.539rem + 1.89vw, 1.75rem)/*-min16px max28px-*/;
+    }
 }
 /*--------*/
 
@@ -307,6 +317,7 @@ body{
     }
   }
 /*----*/
+
 /*----PREVIEW SECTION----*/
 .preview{
     padding:122px clamp(1.25rem, -5.913rem + 14.9vw, 7.5rem) 144px;
