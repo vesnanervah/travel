@@ -99,7 +99,8 @@ let registerFooter = document.querySelector('.register-footer-text');
 let passRecoverBtn = document.querySelector('.forgot-pass');
 let openPopupBtn = document.querySelector('.login-btn');
 let blackBcg = document.querySelector('.black-background');
-let loginMobileBtn = document.querySelector('.login-mobile-btn')
+let loginMobileBtn = document.querySelector('.login-mobile-btn');
+let signInBtn = document.querySelector('.sign-in-btn');
 
 function showPopup(){
     loginPopup.style.left = window.innerWidth/2 - loginPopup.offsetWidth/2 + 'px';
@@ -112,7 +113,11 @@ function hidePopup(){
     blackBcg.classList.add('hidden');
     document.body.style.overflow = 'auto';
 }
-
+function alertUserInut(){
+    let typedMail = document.querySelector('.mail-input').value;
+    let typedPassword = document.querySelector('.password-input').value;
+    alert(`Mail: ${typedMail} Password: ${typedPassword}`);
+}
 
 hidePopup();
 regModeBtn.onclick = function(e){
@@ -137,5 +142,8 @@ loginMobileBtn.onclick = function(){
 }
 blackBcg.onclick = function(){
     hidePopup();
+}
+signInBtn.onclick = function(){
+    alertUserInut();
 }
 //
