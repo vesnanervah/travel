@@ -99,6 +99,7 @@ let registerFooter = document.querySelector('.register-footer-text');
 let passRecoverBtn = document.querySelector('.forgot-pass');
 let openPopupBtn = document.querySelector('.login-btn');
 let blackBcg = document.querySelector('.black-background');
+let loginMobileBtn = document.querySelector('.login-mobile-btn')
 
 function showPopup(){
     loginPopup.style.left = window.innerWidth/2 - loginPopup.offsetWidth/2 + 'px';
@@ -129,6 +130,9 @@ logModeBtn.onclick = function(e){
   popupHeader.textContent = `Log in to your account`;
 }
 openPopupBtn.onclick = function(){
+    showPopup();
+}
+loginMobileBtn.onclick = function(){
     showPopup();
 }
 blackBcg.onclick = function(){
